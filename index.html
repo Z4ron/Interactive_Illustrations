@@ -9,6 +9,7 @@
     <script src="angular.js"></script>
     <script src="ng-grid.js"></script>
     <script src="app.js"></script>
+    <script src="design.js"></script>
   </head>
   <body ng-controller="StoreController as store">
     <!--  Sidebar  -->
@@ -44,7 +45,7 @@
             <a href="" ng-click="page.setPage(2)">Details</a>
           </li>
         </ul>
-        <div class="topRow" ng-show="page.isSet(1)">
+        <div id="topRow" class="topRow" ng-show="page.isSet(1)">
           <span>Death Benefit</span>
           <span>NonGuarCashValue</span>
           <span>Current Rate</span>
@@ -65,7 +66,7 @@
         </div>
       </div>
       <!--  Details Page  -->
-      <div class="detailsPage" ng-if="page.isSet(2)">
+      <div id="detailsPage" class="detailsPage" ng-if="page.isSet(2)">
         <div ng-grid="gridOptions"></div>
       </div>
     </section>
