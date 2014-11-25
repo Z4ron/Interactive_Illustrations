@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="Illustrations">
+  <head>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="ng-grid.css" />
+    <link rel="stylesheet" href="InteractiveIllustrations.css" />
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="angular.js"></script>
+    <script src="ng-grid.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="StoreController as store">
+    <!--  Sidebar  -->
+    <div ng-controller="SideBarController as sidebar" class="sidebar">
+      <div class="sidebarHeader">
+        <img class="IpipelineLogo" src="./images/Ipipeline_Logo_WorldTech.png">
+      </div>
+      <!--  Options  -->
+      <div class="options">
+        <div class="btn-group sidebarOption" ng-repeat="menu in sidebar.Menus | orderBy:'menu.order'">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            {{menu.name}}:  <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="option in menu.options">
+              <a href ng-click="sidebar.setOption(option)">{{option}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--  Content Section  -->
+    <section ng-controller="PageController as page" ng-init="page.setPage(1)">
+      <div class="contentHeader">
+        <ul class="nav nav-pills">
+          <li ng-class="{ active:page.isSet(1) }">
+            <a href="" ng-click="page.setPage(1)">Summary</a>
+          </li>
+          <li ng-class="{ active:page.isSet(3) }">
+            <a href="" ng-click="page.setPage(3)">My Scenarios</a>
+          </li>
+          <li ng-class="{ active:page.isSet(2) }" ng-show="page.isSet(2)">
+            <a href="" ng-click="page.setPage(2)">Details</a>
+          </li>
+        </ul>
+        <div class="topRow" ng-show="page.isSet(1)">
+          <span>Death Benefit</span>
+          <span>NonGuarCashValue</span>
+          <span>Current Rate</span>
+          <span>GuarToAge</span>
+        </div>
+      </div>
+      <!--  Summary Page -->
+      <div class="list-group" ng-if="page.isSet(1)">
+        <div class="list-group-item" ng-repeat="product in store.products">
+            <!--  Table  -->
+            <div class="gridStyle" ng-grid="gridOptions"></div>
+            <!--  Logo/Buttons  -->
+            <img class="Logo" ng-src="{{product.images[0]}}" />
+            <div class="listButtons">
+              <button class="btn btn-success">Select</button>
+              <button class="btn btn-info" ng-click="page.setPage(2)">Details</button>
+            </div>
+        </div>
+      </div>
+      <!--  Details Page  -->
+      <div class="detailsPage" ng-if="page.isSet(2)">
+        <div ng-grid="gridOptions"></div>
+      </div>
+    </section>
+  </body>
+</html>

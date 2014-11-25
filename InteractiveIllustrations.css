@@ -1,0 +1,200 @@
+/* Background */
+body {
+	background-color: white;
+}
+
+/* Make background Full Screen */
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.ng-scope{
+
+}
+
+/* Sidebar */
+
+.sidebar{
+	float: left;
+	width: 25%; 
+	height: 100%;
+	background-color: rgba(28, 54, 94, 1);
+	overflow: hidden;
+}
+
+.IpipelineLogo{
+	width: 100%;
+	border-bottom: solid;
+	border-bottom-color: black;
+	border-bottom-width: 1px; 
+}
+
+.sidebarHeader {
+	
+}
+
+.options{
+	height: 100%;
+}
+
+.sidebarOption{
+	width: 100%;
+	height: 5%;
+	margin-bottom: 1px;
+}
+
+.sidebarOption button{
+	height: 100%;
+	width: 100%;
+	border-radius: 0px;
+	text-align: left;
+	color: white;
+	background-color: rgba(28, 54, 94, 1);
+	border-color: transparent; /* bootstrap override */
+	border-top-color: rgba(28, 54, 94, 1);
+	border-bottom-color: black; 
+	font-weight: bold;
+}
+
+.sidebarOption .btn-default:hover{
+	border-color: transparent;
+}
+
+.sidebarOption span{
+	float: right;
+}
+
+.sidebarOption .dropdown-menu{
+	left: initial; /* bootstrap override */
+	right: 0;
+	width: 100%;
+	border-radius: 0px;
+}
+
+/* Content Section */
+
+.contentHeader {
+	background-color: rgba(61, 108, 181, 1);
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.contentHeader li{
+	border-radius: 0px;
+}
+
+.contentHeader li a{
+	border-radius: 0px;
+	color: white;
+}
+
+.contentHeader li a:hover{
+	background-color: rgba(61, 108, 181, 1);
+}
+
+.contentHeader li.active a{
+	background: rgb(15,52,111); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(15,52,111,1) 0%, rgba(10,72,138,1) 49%, rgba(15,83,147,1) 50%, rgba(14,93,162,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(15,52,111,1)), color-stop(49%,rgba(10,72,138,1)), color-stop(50%,rgba(15,83,147,1)), color-stop(100%,rgba(14,93,162,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(15,52,111,1) 0%,rgba(10,72,138,1) 49%,rgba(15,83,147,1) 50%,rgba(14,93,162,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(15,52,111,1) 0%,rgba(10,72,138,1) 49%,rgba(15,83,147,1) 50%,rgba(14,93,162,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(15,52,111,1) 0%,rgba(10,72,138,1) 49%,rgba(15,83,147,1) 50%,rgba(14,93,162,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(15,52,111,1) 0%,rgba(10,72,138,1) 49%,rgba(15,83,147,1) 50%,rgba(14,93,162,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f346f', endColorstr='#0e5da2',GradientType=0 ); /* IE6-9 */
+
+}
+
+.topRow{
+	background-color: rgb(143, 185, 249);
+}
+
+.topRow span{
+	width: 25%;
+}
+
+section{
+	width: 75%;
+	float: right;
+}
+
+.list-group{
+	margin-top: 60px;
+}
+
+.list-group-item:first-child {
+	border-radius: 0px; 
+}
+
+.list-group-item:last-child {
+	border-radius: 0px; 
+}
+
+.list-group-item{
+	padding: 0px;
+	height: 152px;
+	border: none; /* bootstrap override */
+	margin-bottom: 1px;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+}
+
+.gridStyle {
+	position: absolute;
+	width: 87%;
+}
+
+.Logo {
+	width: 120px;
+	height: 60px;
+	position: absolute;
+	top: 15%;
+	right: 6%;
+}
+
+.listButtons{	
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+.listButtons button{
+	border-radius: 0px;
+	width: 10%;
+	float: right;
+}
+
+/* Details Page */
+.detailsPage{
+	margin-top: 60px;
+}
+
+/* ng-grid css overrides */
+
+.ngViewport {
+	overflow: visible;
+}
+
+.ngTopPanel {
+	border: none;
+}
+
+.list-group-item .ngVerticalBarVisible{
+	width: 0px;
+}
+
+.list-group-item .ngRow.even {
+    background-color: transparent;
+}
+.list-group-item .ngRow.odd {
+    background-color: transparent;
+}
+
+.list-group-item .ngRow{
+	border-bottom: none;
+}
+
+.list-group-item .ngGrid{
+	background-color: transparent;
+}

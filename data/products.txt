@@ -1,0 +1,62 @@
+[{
+      name: 'Protective Life',
+      description: "Protective Life Insurance.",
+      images: [
+        "images/Protective_Logo.png"
+      ],
+      features: [
+        "Yearly Renewable Term(YRT)",
+        "Death Benefits 100% Up"
+      ]
+    }, {
+      name: 'Pacific Life',
+      description: "Pacific Life Insurance.",
+      images: [
+        "images/PacificLife_Logo.png"
+      ],
+      features: [
+        "Yearly Renewable Term(YRT)",
+        "Coverage 99 Years"
+      ]
+    }, {
+      name: 'American General',
+      description: "American General Insurance.",
+      images: [
+        "images/AmericanGeneral_Logo.png"
+      ],
+      features: [
+        "Guaranteed Level Term",
+        "Death Benefits 100% Up"
+      ]
+      }, {
+      name: 'American General',
+      description: "American General Insurance.",
+      images: [
+        "images/Highland_Logo.png"
+      ],
+      features: [
+        "Guaranteed Level Term",
+        "Death Benefits 100% Up"
+      ]
+      }, {
+      name: 'American General',
+      description: "American General Insurance.",
+      images: [
+        "images/Lincoln_Logo.png"
+      ],
+      features: [
+        "Guaranteed Level Term",
+        "Death Benefits 100% Up"
+      ]
+      }, {
+      name: 'American General',
+      description: "American General Insurance.",
+      images: [
+        "images/ING_Logo.png"
+      ],
+      features: [
+        "Guaranteed Level Term",
+        "Death Benefits 100% Up"
+      ]
+
+  }];
